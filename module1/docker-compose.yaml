@@ -2,7 +2,7 @@ services:
   pgdatabase:
     networks: 
       - postgres
-    image: postgres:13
+    image: postgres:latest
     hostname: db
     environment:
       - POSTGRES_USER=root
@@ -29,6 +29,7 @@ services:
       - "8080:80"
     depends_on: 
       - pgdatabase
+
     
 volumes:
   pgadmin:
