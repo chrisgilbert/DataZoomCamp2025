@@ -29,15 +29,6 @@ services:
       - "8080:80"
     depends_on: 
       - pgdatabase
-
-  ingest:
-    networks: 
-      - postgres
-    image: my-ingest
-    build: .
-    environment:
-      - KESTRA_CONFIGURATION=datasources:postgres:url=jdbc:postgresql://db:5432/ny_taxi;driverClassName=org.postgresql.Driver;username=root;password=root;kestra:server:basicAuth:enabled=false;server:repository:type=postgres;server:storage:type=local;server:storage:local:basePath=/app/storage;server:queue:type=postgres;server:tasks:tmpDir:path=/tmp/kestra-wd/tmp;server:url=http://localhost:8080/
-
     
 volumes:
   pgadmin:
