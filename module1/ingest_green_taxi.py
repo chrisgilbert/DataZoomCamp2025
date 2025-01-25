@@ -17,9 +17,14 @@ def main(params):
     port = params.port 
     db = params.db
     table_name = 'green_taxi_trips'
-    # url = 'https://github.com/DataTalksClub/nyc-tlc-data/releases/download/green/green_tripdata_2019-10.csv.gz'
     
-    csv_list= ['green_tripdata_2019-09.csv', 'green_tripdata_2019-10.csv']
+    file_list = ['green_tripdata_2019-10.csv.gz']
+    for file_name in file_list:
+      url = f'https://github.com/DataTalksClub/nyc-tlc-data/releases/download/green/{file_name}'
+      os.system(f"wget {url} -O {file_name}")
+      os.system(f"gunzip {file_name}")
+
+    csv_list= ['green_tripdata_2019-10.csv']
 
     engine = create_engine(f'postgresql://{user}:{password}@{host}:{port}/{db}')
 
