@@ -22,8 +22,8 @@ pip list
 ```
 Gives: `24.3.1`
 
-Set up with docker compose file, gives:
-2. `postgres:5432` (or `db:5432`)
+2. Set up with docker compose file, gives:
+`postgres:5432` (or `db:5432`)
 
 3. With [question3.sql](question3.sql)
 
