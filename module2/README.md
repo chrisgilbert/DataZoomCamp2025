@@ -1,6 +1,6 @@
 ## Homework
 
-Q1: Check the size of the file on GCS - Gives: 128.3MB
+Q1: Check the size of the file on GCS - Gives: `128.3MB`
 
 Q2:  Given config:
 ```
@@ -11,7 +11,7 @@ variables:
 
 "{{render(vars.file)}}"
 ```
-Would make green_tripdata_2020-04.csv
+Would make `green_tripdata_2020-04.csv`
 
 Q3:  SQL Query:
 ```
@@ -43,7 +43,7 @@ SELECT count(*) cnt FROM `kestra_taxi_data.yellow_tripdata_2020_12`
 select sum(cnt) from yellow_months
 ```
 
-Gives 24648499
+Gives `24648499`
 
 Q4: SQL:
 
@@ -75,13 +75,13 @@ SELECT count(*) cnt FROM `kestra_taxi_data.green_tripdata_2020_12`
 )
 select sum(cnt) from green_months
 ```
-Gives: 1734051
+Gives: `1734051`
 
 Q5: SQL
 ```
 select count(*) from kestra_taxi_data.yellow_tripdata_2021_03
 ```
-Gives: 1925152
+Gives: `1925152`
 
 Q6: Trigger section of 06_gcp_taxi_scheduled,yaml should look like this:
 ```
