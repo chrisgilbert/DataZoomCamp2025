@@ -19,13 +19,18 @@ create table kestra_taxi_data.green_tripdata_2022 as (
 )
 ```
 
-1. SQL `select count(*) from kestra_taxi_data.green_tripdata_2022`
+1. SQL ```
+select count(*) 
+from kestra_taxi_data.green_tripdata_2022
+```
 Gives `840402`
 
 2. SQL:
-`select 
+```
+select 
 count(distinct PULocationID) 
-from kestra_taxi_data.green_tripdata_2022`
+from kestra_taxi_data.green_tripdata_2022
+```
 
 Gives `0 MB for the External Table and 6.41MB for the Materialized Table`
 
@@ -36,9 +41,11 @@ count(1)
 from `kestra-test-449012.kestra_taxi_data.green_tripdata_2022`
 where fare_amount = 0
 ```
+
 Gives: `1622`
 
-4. Should: Partition by lpep_pickup_datetime Cluster on PUlocationID
+4. Should: 
+`Partition by lpep_pickup_datetime Cluster on PUlocationID`
 SQL
 ```
 create table kestra_taxi_data.green_tripdata_2022_partitioned
