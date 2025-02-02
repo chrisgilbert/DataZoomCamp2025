@@ -13,13 +13,15 @@ OPTIONS (
 ```
 
 Copy to new table
+
 ```
 create table kestra_taxi_data.green_tripdata_2022 as (
   select * from kestra_taxi_data.green_tripdata_2022_ext
 )
 ```
 
-1. SQL ```
+1. SQL 
+```
 select count(*) 
 from kestra_taxi_data.green_tripdata_2022
 ```
