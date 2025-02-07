@@ -2,3 +2,4 @@ data/
 terraform.tfstate
 terraform.tfstate.backup
 .venv/
+module4/logs/*
