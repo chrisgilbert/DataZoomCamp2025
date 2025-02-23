@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: staging
+    database: kestra-test-449012
+    schema: kestra_taxi_data
+
+    tables:
+      - name: green_tripdata
+      - name: yellow_tripdata
