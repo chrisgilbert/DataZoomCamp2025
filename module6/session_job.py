@@ -3,6 +3,7 @@ from pyflink.table import EnvironmentSettings, DataTypes, TableEnvironment, Stre
 from pyflink.common.watermark_strategy import WatermarkStrategy
 from pyflink.common.time import Duration
 
+
 def create_events_aggregated_sink(t_env):
     table_name = 'processed_events_aggregated'
     sink_ddl = f"""

@@ -3,3 +3,4 @@ terraform.tfstate
 terraform.tfstate.backup
 .venv/
 module4/logs/*
+module6/06-streaming/
